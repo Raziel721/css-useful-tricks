@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1em;
+      }
+      /* using pseudo classes and pseudo elements
+           - pseudo classes are used with single :
+           - pseudo elements are used with double ::
+      */
+      /* selecting the first letter in the first paragraph of the article */
+      .article-body > p:first-child::first-letter {
+        background-color: yellow;
+        font-size: 4em;
+        font-weight: 750;
+        font-style: italic;
+        padding: 0.3em;
+        border: 2px solid;
+        line-height: 1rem;
+        float: left;
+      }
+      /* selecting the first line in the second paragraph of the article */
+      .article-body > p:nth-child(2)::first-line {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Classes and Pseudo Elements</h1>
+    <div class="article-body">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quod
+        explicabo vero ducimus, architecto quasi quos odio soluta sint amet
+        porro reiciendis ipsa?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
+        velit vitae id, aut, provident iste ducimus modi quidem impedit minima
+        ullam voluptates dolor tempora officia eligendi. Architecto repellat
+        laborum dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
+        velit vitae id, aut, provident iste ducimus modi quidem impedit minima
+        ullam voluptates dolor tempora officia eligendi. Architecto repellat
+        laborum dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
+        velit vitae id, aut, provident iste ducimus modi quidem impedit minima
+        ullam voluptates dolor tempora officia eligendi. Architecto repellat
+        laborum dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
+        velit vitae id, aut, provident iste ducimus modi quidem impedit minima
+        ullam voluptates dolor tempora officia eligendi. Architecto repellat
+        laborum dolor.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus,
+        velit vitae id, aut, provident iste ducimus modi quidem impedit minima
+        ullam voluptates dolor tempora officia eligendi. Architecto repellat
+        laborum dolor.
+      </p>
+    </div>
+  </body>
+</html>

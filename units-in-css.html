@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Oswald:300,700"
+    />
+    <style>
+      html {
+        font-size: 16px;
+      }
+
+      ul > li {
+        text-align: left;
+        margin-left: 0.2rem;
+        padding-left: 0.2rem;
+        list-style-type: disc;
+      }
+
+      .grid {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .col {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        color: #34517f;
+        margin: 3em auto;
+        text-align: center;
+        background: linear-gradient(to left, #c2e59c, #64b3f4);
+        font-family: "Oswald", sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.6;
+      }
+
+      .margin-auto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .subhead {
+        font-size: 1.6rem;
+        margin: 0.5em 0;
+      }
+
+      .subhead::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background: #34517f;
+        margin: 1em auto;
+        width: 50%;
+      }
+
+      /* ============
+      === EMS  ===
+      ============ */
+
+      /* .grid {
+         }
+
+         .col--em {
+         } */
+
+      .col--em h1 {
+        font-size: 2.5em;
+      }
+
+      .col--em p {
+        font-size: 1em;
+      }
+
+      /* ============
+      === REMS ===
+      ============ */
+
+      /* .col--rem {
+         } */
+
+      .col--rem h1 {
+        font-size: 2.5rem;
+      }
+
+      .col--rem p {
+        font-size: 1rem;
+      }
+
+      /* ============
+      Call to action
+      ============ */
+
+      h1 {
+        font-size: 4em;
+        margin: 0.5em 0;
+        line-height: 1;
+      }
+
+      .call-to-action {
+        background: linear-gradient(to left, #f46b45, #eea849);
+        padding: 3em 0;
+        color: white;
+        text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        margin-top: 500px;
+        font-size: 1em;
+      }
+
+      .call-to-action--small {
+        font-size: 1em;
+      }
+
+      .btn {
+        display: inline-block;
+        background: black;
+        font-weight: 700;
+        letter-spacing: 5px;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        padding: 1em 3em;
+
+        margin: 0 0.25rem;
+      }
+
+      .btn--small {
+        font-size: 0.5em;
+      }
+
+      .btn--lrg {
+        font-size: 1.5em;
+      }
+      @media (min-width: 1024px) {
+        html {
+          font-size: 25px;
+        }
+        ul > li {
+          text-align: left;
+          margin-left: 1.5rem;
+          padding-left: 0.7rem;
+        }
+        .grid {
+          display: flex;
+          width: 80%;
+          margin: 0 auto;
+        }
+        .col {
+          flex: 1;
+          margin: 0 0.5em;
+          padding: 0 0.5em;
+        }
+      }
+      @media (max-width: 600px) {
+        .grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Units in CSS</h1>
+    <p class="subhead">em | rem</p>
+
+    <div class="grid">
+      <div class="col col--em">
+        <h1>em</h1>
+        <p>All the font sizes in this column are set using ems.</p>
+        <ul>
+          <li>
+            <code>em</code> is a CSS unit which is relative to the font size “of
+            the element on which they are used”.
+          </li>
+          <li>
+            Parent element font sizes can effect em values, but when that
+            happens it’s solely because of inheritance
+          </li>
+          <li>
+            Working with em units can start to get tricky when it comes to
+            inheritance, because every element automatically inherits the font
+            size of its parent.
+          </li>
+          <li>
+            The effect of inheritance can only be overridden by explicitly
+            setting a font size with a unit not subject to inheritance, such as
+            px or vw.
+          </li>
+          <li>
+            The font size of the element on which em units are used determines
+            their size
+          </li>
+          <li>
+            Translation of em units to pixel values is determined by the font
+            size of the element they’re used on. This font size is influenced by
+            inheritance from parent elements unless explicitly overridden with a
+            unit not subject to inheritance.
+          </li>
+        </ul>
+      </div>
+
+      <div class="col col--rem">
+        <h1><code>rem</code></h1>
+        <p>All the font sizes in this column are set using rems.</p>
+        <ul>
+          <li>
+            <code>rem</code> is CSS unit which is relative to the font size of
+            the html (root) element.
+          </li>
+          <li><code>rem</code>s are relative to a base font-size</li>
+          <li>
+            <code>rem</code>s can be used to define the padding and margins to
+            achieve consistent spacing.
+          </li>
+          <li>
+            Translation of rem units to pixel value is determined by the font
+            size of the html element. This font size is influenced by
+            inheritance from the browser font size setting unless explicitly
+            overridden with a unit not subject to inheritance.
+          </li>
+          <li>
+            The greatest power that rem units offer is not just that they give
+            consistent sizing regardless of element inheritance.
+          </li>
+          <li>
+            Rather, it’s that they give us a way to have user font size settings
+            influence every single aspect of a site’s layout by using rem units
+            where we used to use px units.
+          </li>
+          <li>
+            For this reason the primary purpose of using rem units should be to
+            ensure that whatever default font size a user has their browser set
+            to, the layout will adjust to accommodate the size of text within
+            it.
+          </li>
+          <li>
+            By using rem units, if a user increases their font size, the
+            integrity of the layout will be preserved, and the text won’t get
+            squashed up in a rigid space meant for smaller text.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="margin-auto">
+      <h2>When to use REM and EM units:</h2>
+      <ul>
+        <li>
+          <code>rem</code> and <code>em</code> units are computed into pixel
+          values by the browser, based on font sizes in your design.
+        </li>
+        <li>
+          <code>em</code> units are based on the font size of the element
+          they’re used on.
+        </li>
+        <li>
+          <code>rem</code> units are based on the font size of the
+          <code>html</code> element.
+        </li>
+        <li>
+          <code>em</code> units can be influenced by font size inheritance from
+          any parent element
+        </li>
+        <li>
+          <p>
+            <code>rem</code> units can be influenced by font size inheritance
+            from browser font settings.
+          </p>
+        </li>
+        <li>
+          Use <code>em</code> units for sizing that should scale depending on
+          the font size of an element other than the root.
+        </li>
+        <li>
+          Use <code>rem</code> units for sizing that doesn’t need
+          <code>em</code> units, and that should scale depending on browser font
+          size settings.
+        </li>
+        <li>
+          Use <code>rem</code> units unless you’re sure you need
+          <code>em</code> units, including on font sizes.
+        </li>
+        <li>Use <code>rem</code> units on media queries</li>
+        <li>
+          Don’t use <code>em</code> or <code>rem</code> in multi column layout
+          widths - use <code>%</code> instead.
+        </li>
+        <li>
+          Don’t use <code>em</code> or <code>rem</code> if scaling would
+          unavoidably cause a layout element to break.
+        </li>
+      </ul>
+    </div>
+
+    <div class="call-to-action">
+      <h1>A call to action</h1>
+      <a href="" class="btn">Buy now</a>
+      <a href="" class="btn btn--small">Buy now</a>
+      <a href="" class="btn btn--lrg">Buy now</a>
+    </div>
+
+    <div class="call-to-action call-to-action--small">
+      <h1>A call to action</h1>
+      <a href="" class="btn">Buy now</a>
+    </div>
+  </body>
+</html>
