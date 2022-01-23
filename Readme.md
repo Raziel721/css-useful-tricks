@@ -23,3 +23,7 @@ Useful CSS Tricks
 
 - styling horizontal and vertical scrollbars.
 - using a falback with CSS @support for browser which don't support scrollbars styling
+
+<!-- Adding Custommizable Typewriter effect -->
+
+- you can adjust the number of characters in the sentence
