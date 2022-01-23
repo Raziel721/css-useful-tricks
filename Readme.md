@@ -18,3 +18,8 @@ Useful CSS Tricks
 <!-- Differences between EMs and REMs CSS units -->
 
 - making a comparasion between EMs and REMs CSS units.
+
+<!-- Horizontal and Vertical Scrollbar styling -->
+
+- styling horizontal and vertical scrollbars.
+- using a falback with CSS @support for browser which don't support scrollbars styling
