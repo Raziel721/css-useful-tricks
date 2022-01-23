@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        background-color: grey;
+        width: 15rem;
+        /* set a equal with and height by using aspect ratio*/
+        aspect-ratio: 1 / 1;
+        /* set multiple borders or a shadow only at the bottom of the box*/
+        box-shadow: 0 2rem 0 0 blue, 0 4rem 0 0 green, 0 6rem 0 0 purple;
+      }
+      .box2 {
+        background-color: goldenrod;
+        width: 15rem;
+        aspect-ratio: 1 / 1;
+        /* unconventional method of horizontal and vertical positioning of an element */
+        position: fixed;
+        /* inset is the shortand for top right bottom and/or left */
+        inset: 0;
+        margin: auto;
+        /* set a border or a shadow with blur only at the bottom of the box*/
+        box-shadow: 0 2rem 1rem 0rem blue;
+      }
+
+      .box3 {
+        background-color: yellow;
+        width: 15rem;
+        position: absolute;
+        bottom: 80px;
+        right: 50px;
+        /* set a equal with and height by using aspect ratio*/
+        aspect-ratio: 1 / 1;
+        /* set multiple borders / shadows only at the bottom of the box, displaying them gradually from big to small using minus rem values*/
+        box-shadow: 0 2rem 0 -1rem blue, 0 4rem 0 -2rem green,
+          0 6rem 0 -3rem purple;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </body>
+</html>
